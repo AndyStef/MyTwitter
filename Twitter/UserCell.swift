@@ -12,13 +12,16 @@ class UserCell: DatasourceCell {
 
     override var datasourceItem: Any? {
         didSet {
-          //  nameLabel.text = datasourceItem as? String
+            guard let user = datasourceItem as? User else { return }
+            nameLabel.text = user.name
+            usernameLabel.text = user.username
+            bioTextView.text = user.bioText
+            profileImageView.image = user.profileImage
         }
     }
 
     let profileImageView: UIImageView = {
         let image = UIImageView()
-        image.image = #imageLiteral(resourceName: "iron")
         image.layer.cornerRadius = 5
 
         //it's the same
@@ -30,7 +33,6 @@ class UserCell: DatasourceCell {
 
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Andriy Stefanchuk"
         label.font = UIFont.boldSystemFont(ofSize: 16)
 
         return label
@@ -38,7 +40,6 @@ class UserCell: DatasourceCell {
 
     let usernameLabel: UILabel = {
         let label = UILabel()
-        label.text = "@AndyStef"
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor(r: 124, g: 124, b: 124)
 
@@ -47,7 +48,6 @@ class UserCell: DatasourceCell {
 
     let bioTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "There should be very long description of me but i can't say anything about me so i'll just type out all this silly text roflanTigran, roflanBuldiga)))))))0))"
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.backgroundColor = .clear
 
@@ -75,6 +75,9 @@ class UserCell: DatasourceCell {
     override func setupViews() {
         super.setupViews()
 
+        separatorLineView.isHidden = false
+        backgroundColor = .white
+
         addSubview(profileImageView)
         addSubview(nameLabel)
         addSubview(usernameLabel)
@@ -87,8 +90,8 @@ class UserCell: DatasourceCell {
         
         usernameLabel.anchor(nameLabel.bottomAnchor, left: nameLabel.leftAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
 
-        bioTextView.anchor(usernameLabel.bottomAnchor, left: nameLabel.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: -4, leftConstant: -4, bottomConstant: 8, rightConstant: 8, widthConstant: 0, heightConstant: 0)
+        bioTextView.anchor(usernameLabel.bottomAnchor, left: nameLabel.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: -4, leftConstant: -4, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
 
-        followButton.anchor(nameLabel.topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 120, heightConstant: 34)
+        followButton.anchor(nameLabel.topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 120, heightConstant: 37)
     }
 }
