@@ -1,0 +1,21 @@
+PODS:
+  - LBTAComponents (0.1.9)
+
+DEPENDENCIES:
+  - LBTAComponents (from `https://github.com/bhlvoong/LBTAComponents`)
+
+EXTERNAL SOURCES:
+  LBTAComponents:
+    :git: https://github.com/bhlvoong/LBTAComponents
+
+CHECKOUT OPTIONS:
+  LBTAComponents:
+    :commit: 6040506b17875777019189031a6a7525f3ab8767
+    :git: https://github.com/bhlvoong/LBTAComponents
+
+SPEC CHECKSUMS:
+  LBTAComponents: ba294d8c2190b14ad8318c56d956c251638a5840
+
+PODFILE CHECKSUM: 526dcc5e39ba58114fbce298178b9a9d1aa3008e
+
+COCOAPODS: 1.0.1
