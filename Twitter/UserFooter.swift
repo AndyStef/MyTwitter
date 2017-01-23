@@ -22,8 +22,13 @@ class UserFooter: DatasourceCell {
     override func setupViews() {
         super.setupViews()
 
-        backgroundColor = .white
+        let whiteBackgroundView = UIView()
+        whiteBackgroundView.backgroundColor = .white
+
+        addSubview(whiteBackgroundView)
+        whiteBackgroundView.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+
         addSubview(textLabel)
-        textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 14, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 14, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
 }

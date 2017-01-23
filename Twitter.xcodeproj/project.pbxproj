@@ -19,6 +19,7 @@
 		8F9A05531E2FBDB200293644 /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05521E2FBDB200293644 /* UserFooter.swift */; };
 		8F9A05551E2FBDBB00293644 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05541E2FBDBB00293644 /* UserCell.swift */; };
 		8F9A05571E2FD78500293644 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05561E2FD78500293644 /* User.swift */; };
+		8F9A05591E30399600293644 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05581E30399600293644 /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8F9A05521E2FBDB200293644 /* UserFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
 		8F9A05541E2FBDBB00293644 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8F9A05561E2FD78500293644 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8F9A05581E30399600293644 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8F9A05501E2FBDA300293644 /* UserHeader.swift */,
 				8F9A05521E2FBDB200293644 /* UserFooter.swift */,
 				8F9A05541E2FBDBB00293644 /* UserCell.swift */,
+				8F9A05581E30399600293644 /* TweetCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				8F9A05321E2F9FE000293644 /* AppDelegate.swift in Sources */,
 				8F9A05571E2FD78500293644 /* User.swift in Sources */,
 				8F9A05491E2FA51100293644 /* HomeViewController.swift in Sources */,
+				8F9A05591E30399600293644 /* TweetCell.swift in Sources */,
 				8F9A05511E2FBDA300293644 /* UserHeader.swift in Sources */,
 				8F9A05531E2FBDB200293644 /* UserFooter.swift in Sources */,
 			);

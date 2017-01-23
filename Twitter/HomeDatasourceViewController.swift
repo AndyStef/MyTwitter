@@ -14,7 +14,7 @@ class HomeDatasourceViewController: DatasourceController {
 
         datasource = HomeDatasource()
         setupNavigationBarItems()
-        collectionView?.backgroundColor = UIColor.lightGray
+        collectionView?.backgroundColor = UIColor(r: 230, g: 230, b: 230)
     }
 
     private func setupNavigationBarItems() {
@@ -26,6 +26,13 @@ class HomeDatasourceViewController: DatasourceController {
     private func setupRemainingThings() {
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+
+        let navSeparatorView = UIView()
+        navSeparatorView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        view.addSubview(navSeparatorView)
+        navSeparatorView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
 
         let logoImageView = UIImageView(image: #imageLiteral(resourceName: "twitter-logo"))
         logoImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
@@ -53,11 +60,19 @@ class HomeDatasourceViewController: DatasourceController {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 1 {
+            return .zero
+        }
+
         return CGSize(width: view.frame.width, height: 50)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+        if section == 1 {
+            return .zero
+        }
+
+        return CGSize(width: view.frame.width, height: 64)
     }
 
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

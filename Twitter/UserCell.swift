@@ -50,6 +50,8 @@ class UserCell: DatasourceCell {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.backgroundColor = .clear
+        textView.isEditable = false
+        textView.isSelectable = false
 
         return textView
     }()
