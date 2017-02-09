@@ -17,6 +17,10 @@ class HomeDatasourceViewController: DatasourceController {
         collectionView?.backgroundColor = UIColor(r: 230, g: 230, b: 230)
     }
 
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionViewLayout.invalidateLayout()
+    }
+
     private func setupNavigationBarItems() {
         setupLeftNavItems()
         setupRightNavItems()

@@ -85,6 +85,7 @@
 		8F9A05301E2F9FE000293644 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				8F9A05311E2F9FE000293644 /* AppDelegate.swift */,
 				8F9A05431E2F9FF300293644 /* Model */,
 				8F9A05441E2F9FFB00293644 /* View */,
 				8F9A05451E2FA00400293644 /* Controller */,
@@ -128,7 +129,6 @@
 		8F9A05461E2FA02E00293644 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				8F9A05311E2F9FE000293644 /* AppDelegate.swift */,
 				8F9A05381E2F9FE000293644 /* Assets.xcassets */,
 				8F9A053A1E2F9FE000293644 /* LaunchScreen.storyboard */,
 				8F9A053D1E2F9FE000293644 /* Info.plist */,
