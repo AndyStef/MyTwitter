@@ -16,27 +16,6 @@ class Service {
 
     let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
 
-    class Home: JSONDecodable {
-        let users: [User]
-
-        required init(json: JSON) throws {
-            var users = [User]()
-
-            let array = json["users"].array
-
-            for user in array! {
-                let name = user["name"].stringValue
-                let username = user["username"].stringValue
-                let bio = user["bio"].stringValue
-
-                let user = User(name: name, username: username, bioText: bio, profileImage: #imageLiteral(resourceName: "iron"))
-                users.append(user)
-            }
-
-            self.users = users
-        }
-    }
-
     class JSONError: JSONDecodable {
         required init(json: JSON) throws {
             print("error:", json)

@@ -13,31 +13,15 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
 
     let users: [User]
+    let tweets: [Tweet]
 
     required init(json: JSON) throws {
-        var users = [User]()
+        let userJsonArray = json["users"].array
+        self.users = userJsonArray!.map{User(json: $0)}
 
-        let array = json["users"].array
-
-        for user in array! {
-            let name = user["name"].stringValue
-            let username = user["username"].stringValue
-            let bio = user["bio"].stringValue
-
-            let user = User(name: name, username: username, bioText: bio, profileImage: #imageLiteral(resourceName: "iron"))
-            users.append(user)
-        }
-
-        self.users = users
+        let tweetsJsonArray = json["tweets"].array
+        self.tweets = tweetsJsonArray!.map{Tweet(json: $0)}
     }
-
-    let tweets: [Tweet] = {
-        let firstUser = User(name: "Andriy Stefanchuk", username: "@AndyStef", bioText: "There should be very long description of me but i can't say anything about me so i'll just type out all this silly text roflanTigran, roflanBuldiga)))))))0))", profileImage: #imageLiteral(resourceName: "iron"))
-        let tweet = Tweet(user: firstUser, message: "Welcome to the episode number 9 of twitter tutorial series. And also i need very long message right here so i won't just stop here and will keep on typing kappa)")
-        let tweet2 = Tweet(user: firstUser, message: "Here we go again!!!!fsafasf_))fsa")
-
-        return [tweet, tweet2]
-    }()
 
     override func numberOfItems(_ section: Int) -> Int {
         if section == 1 {
