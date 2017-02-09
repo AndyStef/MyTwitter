@@ -7,16 +7,20 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceViewController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        datasource = HomeDatasource()
         setupNavigationBarItems()
         collectionView?.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        Service.sharedInstance.fetchHomeFeed { homeDataSource in
+            self.datasource = homeDataSource
+        }
     }
-
+    
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionViewLayout.invalidateLayout()
     }

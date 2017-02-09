@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0879BE21E87F0B9266FA998E /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E41A8469FB06011684CCD03 /* Pods_Twitter.framework */; };
+		8F4C274C1E4D134800B5EEC9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C274B1E4D134800B5EEC9 /* Service.swift */; };
 		8F9A05321E2F9FE000293644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05311E2F9FE000293644 /* AppDelegate.swift */; };
 		8F9A05391E2F9FE000293644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9A05381E2F9FE000293644 /* Assets.xcassets */; };
 		8F9A053C1E2F9FE000293644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9A053A1E2F9FE000293644 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,7 @@
 		0B802C1522C2EDD9018D8E26 /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 		3E41A8469FB06011684CCD03 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7635F6372510065A7199ED56 /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
+		8F4C274B1E4D134800B5EEC9 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8F9A052E1E2F9FE000293644 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9A05311E2F9FE000293644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F9A05381E2F9FE000293644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F4C274A1E4D131900B5EEC9 /* Network layer */ = {
+			isa = PBXGroup;
+			children = (
+				8F4C274B1E4D134800B5EEC9 /* Service.swift */,
+			);
+			name = "Network layer";
+			sourceTree = "<group>";
+		};
 		8F9A05251E2F9FDF00293644 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 				8F9A05431E2F9FF300293644 /* Model */,
 				8F9A05441E2F9FFB00293644 /* View */,
 				8F9A05451E2FA00400293644 /* Controller */,
+				8F4C274A1E4D131900B5EEC9 /* Network layer */,
 				8F9A05471E2FA06000293644 /* Extensions */,
 				8F9A05461E2FA02E00293644 /* Supporting files */,
 			);
@@ -236,7 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B19368F6B6B4FD4479332FC7 /* [CP] Copy Pods Resources */ = {
@@ -281,6 +292,7 @@
 				8F9A054D1E2FB7CC00293644 /* HomeDatasourceViewController.swift in Sources */,
 				8F9A054B1E2FAA6300293644 /* WordCollectionViewCell.swift in Sources */,
 				8F9A05321E2F9FE000293644 /* AppDelegate.swift in Sources */,
+				8F4C274C1E4D134800B5EEC9 /* Service.swift in Sources */,
 				8F9A05571E2FD78500293644 /* User.swift in Sources */,
 				8F9A05491E2FA51100293644 /* HomeViewController.swift in Sources */,
 				8F9A05591E30399600293644 /* TweetCell.swift in Sources */,

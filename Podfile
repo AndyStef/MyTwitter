@@ -7,5 +7,6 @@ target 'Twitter' do
 
   # Pods for Twitter
 pod 'LBTAComponents', :git => 'https://github.com/bhlvoong/LBTAComponents'
+pod 'TRON', '~> 2.0.0'
 
 end
