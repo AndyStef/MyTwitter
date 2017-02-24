@@ -22,13 +22,13 @@ class Service {
         }
     }
 
-    func fetchHomeFeed(completion: @escaping (HomeDatasource) -> ()) {
+    func fetchHomeFeed(completion: @escaping (HomeDatasource?, Error?) -> ()) {
         let request: APIRequest<HomeDatasource, JSONError> = tron.request("twitter/home")
         
         request.perform(withSuccess: { (homeDatasource) in
-            completion(homeDatasource)
+            completion(homeDatasource, nil)
         }, failure: { (error) in
-            print("Failed", error)
+            completion(nil, error)
         })
     }
 }
