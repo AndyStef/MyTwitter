@@ -28,6 +28,7 @@ class TweetCell: DatasourceCell {
 
 
             messageTextView.attributedText = attributedText
+            profileImageView.loadImage(urlString: tweet.user.profileImageUrl)
         }
     }
 
@@ -38,11 +39,10 @@ class TweetCell: DatasourceCell {
         return textView
     }()
 
-    let profileImageView: UIImageView = {
-        let image = UIImageView()
+    let profileImageView: CachedImageView = {
+        let image = CachedImageView()
         image.layer.cornerRadius = 5
         image.layer.masksToBounds = true
-        image.image = #imageLiteral(resourceName: "iron")
 
         return image
     }()
