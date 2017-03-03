@@ -21,8 +21,8 @@ class HomeDatasource: Datasource, JSONDecodable {
             throw NSError(domain: "com.AndyStef", code: 251, userInfo: [NSLocalizedDescriptionKey: "Parsing JSON was not valid"])
         }
 
-        self.users = userJsonArray.map{User(json: $0)}
-        self.tweets = tweetsJsonArray.map{Tweet(json: $0)}
+        self.users = try userJsonArray.decode()
+        self.tweets = try tweetsJsonArray.decode()
     }
 
     override func numberOfItems(_ section: Int) -> Int {

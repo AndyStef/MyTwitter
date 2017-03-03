@@ -22,6 +22,7 @@
 		8F9A05571E2FD78500293644 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05561E2FD78500293644 /* User.swift */; };
 		8F9A05591E30399600293644 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05581E30399600293644 /* TweetCell.swift */; };
 		8F9A05C51E395C4500293644 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A05C41E395C4500293644 /* Tweet.swift */; };
+		8FF828741E69BC400038E336 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF828731E69BC400038E336 /* Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8F9A05561E2FD78500293644 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8F9A05581E30399600293644 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		8F9A05C41E395C4500293644 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		8FF828731E69BC400038E336 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		8F9A05471E2FA06000293644 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8FF828731E69BC400038E336 /* Collection.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				8F9A054B1E2FAA6300293644 /* WordCollectionViewCell.swift in Sources */,
 				8F9A05321E2F9FE000293644 /* AppDelegate.swift in Sources */,
 				8F4C274C1E4D134800B5EEC9 /* Service.swift in Sources */,
+				8FF828741E69BC400038E336 /* Collection.swift in Sources */,
 				8F9A05571E2FD78500293644 /* User.swift in Sources */,
 				8F9A05491E2FA51100293644 /* HomeViewController.swift in Sources */,
 				8F9A05591E30399600293644 /* TweetCell.swift in Sources */,
